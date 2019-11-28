@@ -78,5 +78,7 @@ describe('NotificationComponent', () => {
     // TODO 17: expect that the "remove" method of the "mockNotificationsService" has been called with the removed notification
 
     // TODO 18: try to break tests to see if they are really working
+
+    // TODO 19: try running "ng test --watch false --code-coverage" and explore content of the "coverage/" folder (open index.html file)
   });
 });
