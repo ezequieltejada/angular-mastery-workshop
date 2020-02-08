@@ -48,9 +48,13 @@ Now lets create some basic layout with header (and navigation), footer and cente
 
 ## Todo 5: Create lazy loaded HomeModule and CustomersModule
 1. Run `ng g m features/home --route home --module app.module.ts` which is a schematics that we used previously to generated `Core` and `Shared` modules but now we use it with additional options `--route` and `--module` which will cause it to be generated as a lazy loaded module belonging to the root `AppModule` (its routing)
-2. Run `ng g m features/customers --route customers --module app.module.ts` will generate lazy loaded `CustomersModule`...
-3. Navigate to routes using menu in the toolbar (if this does NOT work try restarting your application using `npm start`, CLI sometimes doesn't catch all the generated files while running...)
-4. As you might have noticed, we're not displaying any route when navigating to plain root url `http://localhost:4200/`, lets fix that by adding redirect as a first route in `app-routing.module.ts` in the `routes: [ ]` array
+2. Replace the import of the `CommonModule` inside `home.module.ts` with `SharedModule`
+3. Overwrite the `home.component.html` with the following content `<mat-card>Home</mat-card>`
+4. Run `ng g m features/customers --route customers --module app.module.ts` will generate lazy loaded `CustomersModule`...
+5. Replace the import of the `CommonModule` inside `customers.module.ts` with `SharedModule`
+6. Overwrite the `customers.component.html` with the following content `<mat-card>Customers</mat-card>`
+7. Navigate to routes using menu in the toolbar (if this does NOT work try restarting your application using `npm start`, CLI sometimes doesn't catch all the generated files while running...)
+8. As you might have noticed, we're not displaying any route when navigating to plain root url `http://localhost:4200/`, lets fix that by adding redirect as a first route in `app-routing.module.ts` in the `routes: [ ]` array
 
 ```javascript
 {
@@ -60,24 +64,10 @@ Now lets create some basic layout with header (and navigation), footer and cente
 }
 
 ```
-
 Try to use `http://localhost:4200/` url in your browser and see what happens!
-
 
 ## Todo 6: Analyze
 1. Run `npm run analyze` to see how the graph changed as we're now having two lazy loaded modules
+2. Try to figure out in which chunk the `MatCardModule` imported by the `SharedModule` landed.
 
 # Great! We have nice application skeleton, layout and routing with lazy loading, that's a great starting point to start developing features!
-
-## How to start
-
-- try searching for numbered `TODO` readme items and `// TODO` code comments in the `projects` folder or use TODO functionality of your editor 
-
-## How to use exercises
-
-- every exercise folder should be installed using `npm ci`
-- every exercise can be started using `npm start` to run the app
-- every exercise can start tests in watch mode using `npm run watch`
-- every exercise has it's own `README.md` file with additional description of the given exercise
-- every exercise project contains ordered `TODO ` in the readme and `// TODO` comments inside of the source code (eg `// TODO 2: description`) which should be followed to complete the given exercise
-- you can always search for `// TODO`, or `<!-- TODO` or check `README.md` for the next TODO item
