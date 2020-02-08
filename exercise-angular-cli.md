@@ -118,7 +118,7 @@ Our workspace setup is prety much done, let's see how it looks like and what can
 1. Open `angular.json` file in the workspace root, it represents the main descriptor and configuration of the whole workspace
 2. Depending on your IDE, try to collapse `projects` property
 3. Our workspace currently has only one project (`customer-admin-app`) and for that reason it was set as the `defaultProject`, single workspace can host multiple apps and libraries and the `defaultProject` tells CLI to run given command agains that project by default, we can still build other project by specifying it using `--project` flag so for example we could use `ng build --prod --project some-other-app`
-4. Inside of `customer-admin-app` you cna find `architect` property with `build` property and finally `configuration` property, here you can see what options are applied by default when using `--prod` flag (it is possible to define your own custom configurations which then can be activated using `--configuration <my-config>` flag when running commands)
+4. Inside of `customer-admin-app` you can find `architect` property with `build` property and finally `configuration` property, here you can see what options are applied by default when using `--prod` flag (it is possible to define your own custom configurations which then can be activated using `--configuration <my-config>` flag when running commands)
 5. Find `budgets` in the `build` configuration, this feature enables your build to fail if the size of the bundle crosses specified threshold, try to set it lower and run `npm run build:prod` to see it fail...
 6. Explore the `schematics` property of the `customer-admin-app`, here you can set schematics defaults so let's say if you always wanted to use components with inline templates instead of standalone HTML file you could specify it here instead of always writing `ng generate component some-component --inline-template`
 7. Try to use code completing (of your IDE) inside of schematics configuration and you should get hints about all the available options
@@ -166,7 +166,7 @@ Setting up Angular material is not trivial and includes couple of steps and choi
 
 Luckily, Angular CLI and Angular Schematics support automating of such proceses using `ng add` command!
 
-1. Run `ng add --help` to see available options, the `collection` stands for the package to be added and in our case that will be `@angular/materail`
+1. Run `ng add --help` to see available options, the `collection` stands for the package to be added and in our case that will be `@angular/material`
 2. Run `ng add @angular/material`, the package will be installed and the Angular Schematics will prompt us for some required options that we didn't provide with the commnad
 3. Choose `Custom` theme
 4. Confirm setup of HammerJS
