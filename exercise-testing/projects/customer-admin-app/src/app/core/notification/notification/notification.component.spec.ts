@@ -37,7 +37,7 @@ describe('NotificationComponent', () => {
 
   beforeEach(async(() => {
     // TODO 5: create "mockNotificationService" as a new empty object
-    // and add "notification" property with the observable value "of()" MOCK_NOTIFICATIONS
+    // and add "notifications" property with the observable value "of()" MOCK_NOTIFICATIONS
     // also add remove method (try using IDE code completion) and leave it empty
 
     // TODO 6: use Jasmine "spyOn" method to spy on "mockNotificationService" "remove" method
