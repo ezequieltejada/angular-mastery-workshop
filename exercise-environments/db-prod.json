@@ -1,0 +1,63 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Bolton",
+      "surname": "Ramsey",
+      "birthday": "1995-07-02T00:00:00.000Z",
+      "lifetimeOrderValue": 342,
+      "isVip": true,
+      "address": {
+        "location": "Castle Black",
+        "land": "The North",
+        "continent": "Westeros"
+      },
+      "tags": [
+        "hunter",
+        "bastard"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mormond",
+      "surname": "Jorah",
+      "birthday": "1996-11-30T00:00:00.000Z",
+      "lifetimeOrderValue": 0,
+      "address": {
+        "location": "Bear Island",
+        "land": "Slaver's Bay",
+        "continent": "Essos"
+      },
+      "tags": [
+        "The exile knight"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Aria",
+      "surname": "Stark",
+      "birthday": "1999-05-07T00:00:00.000Z",
+      "lifetimeOrderValue": 15247,
+      "address": {
+        "location": "Winterfell",
+        "land": "The North",
+        "continent": "Westeros"
+      },
+      "tags": []
+    },
+    {
+      "id": 4,
+      "name": "Jaime",
+      "surname": "Lannister",
+      "birthday": "1980-09-02T00:00:00.000Z",
+      "lifetimeOrderValue": 627913,
+      "address": {
+        "land": "The Westerlands",
+        "continent": "Westeros"
+      },
+      "tags": [
+        "the Kingslayer"
+      ]
+    }
+  ]
+}
