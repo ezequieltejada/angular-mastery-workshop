@@ -3,13 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { shareReplay, tap } from 'rxjs/operators';
 
-import { environment } from '../../../../environments/environment';
-
 import { ReactiveNotificationService } from '../../../core/notification/reactive-notification.service';
-
 import { Customer } from '../model/customers';
 
-export const RESOURCE_URL = `${environment.API_URL}/customers`;
+export const RESOURCE_URL = 'http://localhost:4300/api';
 
 @Injectable()
 export class CustomersBackendService {

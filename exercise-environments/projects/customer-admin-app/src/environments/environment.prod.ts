@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_URL: 'http://localhost:4300/api',
+  API_URL: 'REPLACE_ME', // Todo replace with the prod backend
 };

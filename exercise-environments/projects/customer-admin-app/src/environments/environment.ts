@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:4300/api',
+  API_URL: 'REPLACE_ME', // TODO replace with the dev backend
 };
 
 /*

@@ -1,0 +1,62 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Stanis",
+      "surname": "Baratheon",
+      "birthday": "1995-07-02T00:00:00.000Z",
+      "lifetimeOrderValue": 342,
+      "isVip": true,
+      "address": {
+        "location": "Dragon Stone",
+        "land": "Westeros",
+        "continent": "Westeros"
+      },
+      "tags": [
+        "King of the Andals and the first",
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mormond",
+      "surname": "Lyanna",
+      "birthday": "1996-11-30T00:00:00.000Z",
+      "lifetimeOrderValue": 0,
+      "address": {
+        "location": "Bear Island",
+        "land": "Slaver's Bay",
+        "continent": "Essos"
+      },
+      "tags": [
+        "Lady of Bear Island"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Brandon",
+      "surname": "Stark",
+      "birthday": "1999-05-07T00:00:00.000Z",
+      "lifetimeOrderValue": 15247,
+      "address": {
+        "location": "Winterfell",
+        "land": "The North",
+        "continent": "Westeros"
+      },
+      "tags": []
+    },
+    {
+      "id": 4,
+      "name": "Tywin",
+      "surname": "Lannister",
+      "birthday": "1980-09-02T00:00:00.000Z",
+      "lifetimeOrderValue": 627913,
+      "address": {
+        "land": "The Westerlands",
+        "continent": "Westeros"
+      },
+      "tags": [
+        "lord of casterly rock"
+      ]
+    }
+  ]
+}
