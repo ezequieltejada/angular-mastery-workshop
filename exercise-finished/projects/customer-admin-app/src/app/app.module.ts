@@ -19,7 +19,6 @@ import { AppComponent } from './app.component';
 
     // local
     CoreModule,
-    SharedModule,
     AppRoutingModule,
   ],
   bootstrap: [AppComponent],
