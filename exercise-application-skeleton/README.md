@@ -18,7 +18,7 @@ Make sure your application is installed `npm ci` and is running by executing `np
 ## TODO 1: Create CoreModule
 We're going to use Angular Schematics to help us scaffold base application structure
 
-1. Run `ng generate module core` (or `ng g m core`) which will generate `CoreModule` file in the `src/core` folder
+1. Run `ng generate module core` (or `ng g m core`) which will generate `CoreModule` file in the `src/app/core` folder
 2. Add `CoreModule` to the `imports: [ ]` array of the `AppModule` (the IDE should auto-import the module form correct location...)
 
 ## TODO 2: Create base layout
