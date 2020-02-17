@@ -56,7 +56,7 @@ In this exercise were going to explore Angular CLI
 ## TODO 5 - Build the application
 
 1. Serving application is great for the development purposes but we have to build artifacts to deploy to production
-2. Build application using `ng build` (or `npm run build`, notice the `run` keyword, every script besides `start` and `test` ha to use `run`)
+2. Build application using `ng build` (or `npm run build`, notice the `run` keyword, every script besides `start` and `test` have to use `run`)
 3. Once done explore the `dist` folder
 4. Add new `build:prod` script to your `package.json` file and add `--prod` flags, and build your application again using `npm build:prod`
 5. Once done explore the `dist` folder
@@ -151,7 +151,7 @@ Prettier is amazing frontend tooling package which enables autoformatting of you
 As we might have noticed, running freshly generated application comes with some default content which
 gives us some pointers abou the next steps. That being said we need to get rid of it to start developing our own features.
 
-1. Open the `app.component.html` file a delete all its content.
+1. Open the `app.component.html` file and delete all its content.
 2. Add `<h1>{{title}} app is running!</h1>` instead
 3. Open the `app.component.spec.ts` file and change `compiled.querySelector('.content span')` to `compiled.querySelector('h1')`
 4. Try to run tests using `npm test`
