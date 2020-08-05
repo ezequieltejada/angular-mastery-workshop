@@ -22,7 +22,7 @@
             "main": "projects/customer-admin-app/src/main.ts",
             "polyfills": "projects/customer-admin-app/src/polyfills.ts",
             "tsConfig": "projects/customer-admin-app/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/customer-admin-app/src/favicon.ico",
               "projects/customer-admin-app/src/assets"
@@ -45,7 +45,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
