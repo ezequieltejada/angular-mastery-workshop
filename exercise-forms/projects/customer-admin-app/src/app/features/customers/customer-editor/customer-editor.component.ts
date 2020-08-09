@@ -84,7 +84,7 @@ export class CustomerEditorComponent implements OnInit {
     // try playing with tags component
   }
 
-  private navigateToCustomerOverview() {
+  navigateToCustomerOverview() {
     this.router.navigate(['../../'], {
       relativeTo: this.activatedRoute,
     });

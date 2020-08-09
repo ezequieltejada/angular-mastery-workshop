@@ -2,6 +2,7 @@ export interface Customer {
   id: number;
   name: string;
   surname: string;
+  middleName?: string;
   birthday?: string;
   isVip?: boolean;
   lifetimeOrderValue?: number;
