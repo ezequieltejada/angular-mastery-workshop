@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { debounceTime, startWith, switchMap, tap } from 'rxjs/operators';
-import {MatInput} from '@angular/material/input';
+import { MatInput } from '@angular/material/input';
 
 import { Customer } from './model/customers';
 import { CustomersBackendService } from './services/customers-backend.service';

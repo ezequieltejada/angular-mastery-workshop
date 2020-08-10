@@ -19,7 +19,6 @@ describe('NotificationComponent', () => {
   let fixture: ComponentFixture<NotificationComponent>;
   // TODO 4: declare re-assignable "mockNotificationService" variable with "Partial" type of the real service (you can find it in the component class)
 
-
   // TODO 8: implement "getNotifications" helper which will get notifications from DOM
   // using fixture debugElement "queryAll" method where we will pass "By.css" method and a css selector for "mat-card" element
   const getNotifications = () => null;
@@ -64,21 +63,15 @@ describe('NotificationComponent', () => {
   it('should render notifications', () => {
     // TODO 9: expect the number of rendered notifications (using previously defined "getNotifications()" method) to correspond to the count of mock notifications in the data created above
     // hint: ALWAYS try to break test to see if it is really working (eg with the wrong number of notifications)
-
     // TODO 12: expect second notifications text to be value as in the data created above
   });
 
   it('it removes notification when button is clicked', () => {
     // TODO 14: retrieve button of the error notification (which index?) access its "native" element and call "click()" method
-
     // TODO 15: call "detectChanges()" method of the "fixture"
-
     // TODO 16: expect that the "remove" method of the "mockNotificationsService" has been called once
-
     // TODO 17: expect that the "remove" method of the "mockNotificationsService" has been called with the removed notification
-
     // TODO 18: try to break tests to see if they are really working
-
     // TODO 19: try running "ng test --watch false --code-coverage" and explore content of the "coverage/" folder (open index.html file)
   });
 });

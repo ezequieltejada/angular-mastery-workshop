@@ -16,14 +16,12 @@ export class HttpNotificationInterceptor implements HttpInterceptor {
   constructor(private notificationService: NotificationService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
     return next.handle(req).pipe(
-
       tap({
         next: (event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
-
-            if (event.status > 201) { // TODO 12: try to change this condition so that interceptors starts displaying notifications also for the successfull requests (code 200)
+            if (event.status > 201) {
+              // TODO 12: try to change this condition so that interceptors starts displaying notifications also for the successfull requests (code 200)
               this.notificationService.error('Backend request failed');
             }
           }
@@ -31,8 +29,7 @@ export class HttpNotificationInterceptor implements HttpInterceptor {
         error: error => {
           this.notificationService.error('Backend request failed');
         },
-      })
-
+      }),
     );
   }
 }

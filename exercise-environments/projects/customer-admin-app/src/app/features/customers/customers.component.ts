@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatInput } from '@angular/material';
+import { MatInput } from '@angular/material/input';
 import { Observable } from 'rxjs';
 import { debounceTime, shareReplay, startWith, switchMap, tap } from 'rxjs/operators';
 

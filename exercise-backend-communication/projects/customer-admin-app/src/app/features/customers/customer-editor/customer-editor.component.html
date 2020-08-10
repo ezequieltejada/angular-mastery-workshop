@@ -27,7 +27,12 @@
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Birthday</mat-label>
-          <input matInput [matDatepicker]="picker" placeholder="Birthday" formControlName="birthday">
+          <input
+            matInput
+            [matDatepicker]="picker"
+            placeholder="Birthday"
+            formControlName="birthday"
+          />
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
@@ -35,7 +40,6 @@
     </form>
 
     <div class="actions">
-
       <button mat-raised-button (click)="submit(c)" color="accent">Submit</button>
       <button mat-flat-button (click)="reset(c)">Reset</button>
     </div>
