@@ -1,6 +1,6 @@
 # Angular Mastery Workshop
 
-by [@tomastrajan](https://twitter.com/tomastrajan)
+by [@tomastrajan](https://twitter.com/tomastrajan) and [@kreuzercode](https://twitter.com/kreuzercode)
 by [@kreuzercode](https://twitter.com/kreuzercode)
 
 # Welcome to exercise - Environments
