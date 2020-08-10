@@ -17,10 +17,8 @@ export class ReactiveNotificationService {
 
   constructor(private uuidService: UuidService) {
     // TODO 14: Define const "addStream" with value of "this.addNotificationTrigger.asObservable()"
-
     // TODO 15: Define const "removeStream" with value of "this.removeNotificationTrigger.asObservable().pipe(mergeMap(action => of(action).pipe(delay(action.timeout || 0))))"
     // this will basically delay that trigger by the value of timeout if timeout was provided
-
     // TODO 16: Initialize value of "this.notifications" with a following stream
     // 1. use "merge" creator operator (from "rxjs" package) and pass in "addStream" and the "removeStream"
     // 2. use ".pipe()" on merge and pass in "scan" operator (from "rxjs/operators" package)
@@ -51,10 +49,8 @@ export class ReactiveNotificationService {
     // "id" use "this.uuidService" to generate new id
     // "type" use type passed in this function as an argument
     // "message" use message passed in this function as an argument
-
     // TODO 12: fire next "addNotificationTrigger" by calling its "next()" method
     // and pass in object with "type: 'add'", "notification" object which we created just above
-
     // TODO 13: in case function received "timeout", which is an optional argument of this function
     // fire next "removeNotificationTrigger" by calling its "next()" method
     // and pass in object with "type: 'remove'", "notification" (from this function argument) and the received "timeout"

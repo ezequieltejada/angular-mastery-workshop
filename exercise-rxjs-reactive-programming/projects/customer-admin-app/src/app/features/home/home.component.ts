@@ -7,7 +7,6 @@ import { NotificationService } from '../../core/notification/notification.servic
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   constructor(private notificationService: NotificationService) {}
 
   ngOnInit() {}

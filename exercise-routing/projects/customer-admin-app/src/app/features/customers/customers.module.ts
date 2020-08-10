@@ -9,11 +9,7 @@ import { CustomersBackendService } from './services/customers-backend.service';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
-  declarations: [
-    CustomersComponent,
-    CustomerItemComponent,
-    CustomerDetailsComponent,
-  ],
+  declarations: [CustomersComponent, CustomerItemComponent, CustomerDetailsComponent],
   imports: [SharedModule, CustomersRoutingModule],
   providers: [CustomersBackendService],
 })

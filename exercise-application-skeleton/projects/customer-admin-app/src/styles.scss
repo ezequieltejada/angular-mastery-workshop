@@ -19,9 +19,9 @@ $customer-admin-app-warn: mat-palette($mat-orange);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $customer-admin-app-theme: mat-light-theme(
-    $customer-admin-app-primary,
-    $customer-admin-app-accent,
-    $customer-admin-app-warn
+  $customer-admin-app-primary,
+  $customer-admin-app-accent,
+  $customer-admin-app-warn
 );
 
 // Custom theme imports

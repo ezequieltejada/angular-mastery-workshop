@@ -20,7 +20,7 @@ registerLocaleData(localeDeCh);
   providers: [
     { provide: LOCALE_ID, useValue: 'de-CH' },
     { provide: HTTP_INTERCEPTORS, useClass: HttpNotificationInterceptor, multi: true },
-    NotificationService
+    NotificationService,
     // TODO 19: replace "NotificationService" with "{ provide: NotificationService, useClass: ReactiveNotificationService }"
     // TODO 20: find it in the "notification.component.html"
   ],

@@ -28,7 +28,7 @@ export class CustomerEditorComponent implements OnInit {
     this.customerForm = this.fb.group({
       name: ['', [Validators.required]],
       surname: ['', [Validators.required]],
-      birthday: ['', [Validators.required]]
+      birthday: ['', [Validators.required]],
     });
 
     this.customer = this.activatedRoute.paramMap.pipe(
@@ -43,7 +43,7 @@ export class CustomerEditorComponent implements OnInit {
     this.customersBackendService
       .update({
         ...customer,
-        ...customerFormValue
+        ...customerFormValue,
       })
       .subscribe(() => this.router.navigate(['../../'], { relativeTo: this.activatedRoute }));
   }
