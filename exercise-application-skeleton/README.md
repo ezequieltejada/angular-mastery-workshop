@@ -48,7 +48,7 @@ Now let's create some basic layout with a header (and navigation), footer and ce
 
 ## Todo 5: Create lazy loaded HomeModule and CustomersModule
 1. Run `ng g m features/home --route home --module app.module.ts` which is a schematics that we used previously to generated `Core` and `Shared` modules but now we use it with additional options `--route` and `--module` which will cause it to be generated as a lazy loaded module belonging to the root `AppModule` (its routing)
-2. Replace the import of the `CommonModule` inside `home.module.ts` with `SharedModule`
+2. Replace the import of the `CommonModule` inside `home.module.ts` with `SharedModule` (hint: is always good to remove unused imports from the top of the file)
 3. Overwrite the `home.component.html` with the following content `<mat-card>Home</mat-card>`
 4. Run `ng g m features/customers --route customers --module app.module.ts` will generate lazy loaded `CustomersModule`...
 5. Replace the import of the `CommonModule` inside `customers.module.ts` with `SharedModule`
@@ -68,6 +68,6 @@ Try to use `http://localhost:4200/` url in your browser and see what happens!
 
 ## Todo 6: Analyze
 1. Run `npm run analyze` to see how the graph changed as we're now having two lazy loaded modules
-2. Try to figure out in which chunk the `MatCardModule` imported by the `SharedModule` landed.
+2. Try to figure out in which chunk the `MatCardModule` imported by the `SharedModule` landed. (hint: you might need to uncheck `main.<hash>.js` file in the controls to see small lazy loaded chunks)
 
 # Great! We have nice application skeleton, layout and routing with lazy loading, that's a great starting point to start developing features!
