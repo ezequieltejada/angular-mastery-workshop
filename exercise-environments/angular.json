@@ -123,5 +123,8 @@
         }
       }
     }},
-  "defaultProject": "customer-admin-app"
+  "defaultProject": "customer-admin-app",
+  "cli": {
+    "analytics": "176bc541-7ed0-4f5c-ac5c-69210ee28cff"
+  }
 }
