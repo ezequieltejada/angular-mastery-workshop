@@ -27,8 +27,8 @@ In this exercise were going to explore Angular CLI
 ## TODO 2 - Create new Angular workspace
 
 1. Workspaces are created using `ng new` command but before we execute it explore available options
-2. Run `ng new exercise-angular-cli` command with options that disables creation of initial application `--create-application false`, sets `--style` to `scss` , enables `routing` and sets `prefix` to `my-org` (hint: use `ng new --help` to see what are the exact options to achieve this)
-3. Once done explore what was generated inside your IDE and enter the workspace folder in your console (eg `cd exercise-angular-cli`)
+2. Run `ng new exercise-angular-cli` command with options that disable the creation of an initial application `--create-application false`, sets `--style` to `scss` , enables `routing` and sets `prefix` to `my-org` (hint: use `ng new --help` to see what are the exact options to achieve this)
+3. Once done, explore the generated workspace folder in your console and inspect the generated files in your IDE (eg `cd exercise-angular-cli`)
 
 ## TODO 3 - Learn how to use Angular schematics
 
