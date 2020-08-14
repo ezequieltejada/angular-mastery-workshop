@@ -22,7 +22,7 @@ We're going to use Angular Schematics to help us scaffold base application struc
 2. Add `CoreModule` to the `imports: [ ]` array of the `AppModule` (the IDE should auto-import the module form correct location...)
 
 ## TODO 2: Create base layout
-Now lets create some basic layout with header (and navigation), footer and center content area where we will display active route
+Now let's create some basic layout with a header (and navigation), footer and center content area where we will display active route
 
 1. Use `ng g c core/layout/header` to generate new header component, it will automatically be added to the `declarations: [ ]` of `CoreModule` and add it to the `exports: [ ]` too! 
 2. Add `<my-org-header></my-org-header>` as the first component in the `app.component.html` template
