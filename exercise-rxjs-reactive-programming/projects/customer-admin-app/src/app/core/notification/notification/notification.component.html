@@ -1,4 +1,5 @@
 <!-- TODO 20: replace "notificationsSync" with "notifications" and add "| async" pipe to subscribe to the reactive notification stream -->
+<!-- TODO 21: try if the solution works in running application (in browser) -->
 <mat-card *ngFor="let notification of notificationsSync" [ngClass]="notification.type">
   <mat-icon>{{ notification.type }}</mat-icon>
   <p>{{ notification.message }}</p>

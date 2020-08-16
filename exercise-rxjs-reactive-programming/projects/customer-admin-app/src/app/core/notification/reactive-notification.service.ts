@@ -41,11 +41,11 @@ export class ReactiveNotificationService {
 
   remove(notification: Notification) {
     // TODO 10: fire next "removeNotificationTrigger" by calling its "next()" method
-    // and pass in object with "type: 'remove'", "notification" (from this function argument) and "timeout" 0
+    // and pass in object with "type: 'remove'", "notification" (from this function argument) and "timeout" 0 (hint: use editor code completion or have a look at NotificationAction interface)
   }
 
   private addNotification(type: NotificationType, message: string, timeout?: number) {
-    // TODO 11: create new notification object and store it in the "notification" const with following object properties...
+    // TODO 11: create new notification object and store it in the "notification" const of type Notification with following object properties...
     // "id" use "this.uuidService" to generate new id
     // "type" use type passed in this function as an argument
     // "message" use message passed in this function as an argument
@@ -53,6 +53,6 @@ export class ReactiveNotificationService {
     // and pass in object with "type: 'add'", "notification" object which we created just above
     // TODO 13: in case function received "timeout", which is an optional argument of this function
     // fire next "removeNotificationTrigger" by calling its "next()" method
-    // and pass in object with "type: 'remove'", "notification" (from this function argument) and the received "timeout"
+    // and pass in object with "type: 'remove'", "notification" (the one we just created) and the received "timeout"
   }
 }
