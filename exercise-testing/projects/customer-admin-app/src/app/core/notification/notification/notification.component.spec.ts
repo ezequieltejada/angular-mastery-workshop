@@ -25,14 +25,14 @@ describe('NotificationComponent', () => {
 
   // TODO 10: implement "getNotificationByIndex" method which will get notifications as previous method but return n-th item based on the "notificationIndex"
   // (use array access, eg items[index])
-  const getNotificationByIndex = notificationIndex => null;
+  const getNotificationByIndex = (notificationIndex) => null;
 
   // TODO 11: implement "getNotificationText" method by calling previously defined "getNotificationByIndex" continuing by using "query" with "By.css" for "p" tag
   // then retrieve its "nativeElement", access the "textContent" and use "trim()" method
-  const getNotificationText = notificationIndex => null;
+  const getNotificationText = (notificationIndex) => null;
 
   // TODO 13: implement "getNotificationButton" method by calling previously defined "getNotificationByIndex" continuing by using "query" with "By.css" for "button" tag
-  const getNotificationButton = notificationIndex => null;
+  const getNotificationButton = (notificationIndex) => null;
 
   beforeEach(async(() => {
     // TODO 5: create "mockNotificationService" as a new empty object
