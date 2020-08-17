@@ -26,7 +26,7 @@ import { TagListComponent } from './tag-list/tag-list.component';
     // angular
     CommonModule,
     RouterModule,
-    // TODO 1: import (and export) "ReactiveFormsModule"
+    // TODO 1: "ReactiveFormsModule" has to be added to both imports and exports
 
     // material
     MatToolbarModule,
@@ -46,6 +46,7 @@ import { TagListComponent } from './tag-list/tag-list.component';
     // angular
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
 
     // material
     MatToolbarModule,

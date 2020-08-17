@@ -32,12 +32,12 @@ export class CustomerEditorComponent implements OnInit {
     this.customerForm = undefined;
 
     // TODO 4: most string values should use "required" validator (from "Validators"), feel free to experiment with other built in validators
-    // hint: required validator is just a property NOT a funtion (as you might get it by the IDE code completion)
+    // hint: required validator is just a property NOT a function (as you might get it by the IDE code completion)
 
     // next TODO items can be found in "customer-editor.component.html" file
 
     this.customer = this.activatedRoute.paramMap.pipe(
-      map(paramMap => paramMap.get('id')),
+      map((paramMap) => paramMap.get('id')),
       switchMap((id: string) => this.customersBackendService.get(parseInt(id, 10))),
       // TODO 13: created form starts with default values but we want to edit existing customer
       // we have to use retrieved "customer" value (from backend) and feed it to the form
@@ -50,9 +50,9 @@ export class CustomerEditorComponent implements OnInit {
     // TODO 19: use form "valid" property to NOT submit form when the form is invalid
     // it is also nice to highlight all invalid fields using form "markAllAsTouched()" method
     // try to edit customer and see difference by navigating to customer details or reloading page
+    // hint: we need to return from the if statement so that the following backend request is not executed for invalid form
     // last todo is back in the "customer-editor.component.html"
     if (true) {
-      return;
     }
 
     this.customersBackendService
@@ -65,6 +65,7 @@ export class CustomerEditorComponent implements OnInit {
 
   reset(customer: Customer) {
     // TODO 18: use form "reset" method to reset touched / dirty state and to pass in original customer (from backend) to reset from value
+    // hint: the original value of customer is available as method parameter
   }
 
   addTag(tag: string) {
