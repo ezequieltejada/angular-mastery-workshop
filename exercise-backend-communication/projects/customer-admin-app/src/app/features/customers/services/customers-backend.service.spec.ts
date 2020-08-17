@@ -1,9 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { CustomersBackendService, RESOURCE_URL } from './customers-backend.service';
 import { NotificationService } from '../../../core/notification/notification.service';
 import { ReactiveNotificationService } from '../../../core/notification/reactive-notification.service';
+
+import { CustomersBackendService, RESOURCE_URL } from './customers-backend.service';
 
 describe('CustomersBackendService', () => {
   let service: CustomersBackendService;
@@ -21,6 +22,7 @@ describe('CustomersBackendService', () => {
     // run tests using "npm run watch" and use "fdescribe" instead of "describe" at the top of this file to only run this test
     // TODO 7: Use the "TestBed" to get instance of "CustomersBackendService" and store it in the "service" variable
     // TODO 8: Use the "TestBed" to get instance of "HttpTestingController" and store it in the "service" httpTestingController
+    // hint: use inject method
   });
 
   afterEach(() => {
@@ -34,7 +36,8 @@ describe('CustomersBackendService', () => {
       // TODO 10: add expectation that the received "customer" will equal to the "MOCK_CUSTOMER"
     });
 
-    // TODO 11: what kind of url shoudl be called when we're trying to get customer with id 0 from the "RESOURCE_URL" resource? (put it as a string in place of <replace-this>)
+    // TODO 11: what kind of url should be called when we're trying to get customer with id 0 from the "RESOURCE_URL" resource?
+    // (put it as a string in place of <replace-this>)
     const req = httpTestingController.expectOne('<replace-this>');
     expect(req.request.method).toBe('GET');
     req.flush(MOCK_CUSTOMER);

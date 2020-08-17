@@ -21,7 +21,8 @@ export class HttpNotificationInterceptor implements HttpInterceptor {
         next: (event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
             if (event.status > 201) {
-              // TODO 12: try to change this condition so that interceptors starts displaying notifications also for the successfull requests (code 200)
+              // TODO 12: try to change this condition so that interceptors starts displaying notifications also for the successful requests (code 200)
+              // optional: adjust notification message type and message to match new functionality
               this.notificationService.error('Backend request failed');
             }
           }

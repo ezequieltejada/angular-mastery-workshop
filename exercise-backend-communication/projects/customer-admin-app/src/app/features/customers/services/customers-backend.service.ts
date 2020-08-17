@@ -18,6 +18,7 @@ export class CustomersBackendService {
   constructor(private httpClient: HttpClient, private notificationService: NotificationService) {
     // TODO 2: create stream of all customers using http client get method (make request to RESOURCE_URL)
     // and use shareReplay RxJs operator with "bufferSize: 1" and "refCount: true" options, the stream should be stored in this.customers instance variable
+    // hint: you might need to provide generic type for the .get<>() method based on the this.customers
   }
 
   findCustomers(query: string): Observable<Customer[]> {
