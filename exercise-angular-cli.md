@@ -1,6 +1,6 @@
 # Angular Mastery Workshop
 
-by [@tomastrajan](https://twitter.com/tomastrajan) and [@kreuzercode](https://twitter.com/kreuzercode) & [@kreuzercode](https://twitter.com/kreuzercode)
+by [@tomastrajan](https://twitter.com/tomastrajan) and [@kreuzercode](https://twitter.com/kreuzercode)
 
 # Welcome to exercise - Angular CLI
 
@@ -21,6 +21,7 @@ In this exercise were going to explore Angular CLI
 
 ## TODO 1 - Learn how to use Angular CLI
 
+0. Run `ng --version` to  confirm version of your global Angular CLI (should be latest). If not, please update it using `npm i -g @angular/cli@latest`.
 1. Run `ng` command to see all the available Angular CLI commands
 2. Try running `ng <some-command> --help` (please use `ng new --help`) as we're not in Angular workspace yet
 
