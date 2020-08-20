@@ -24,9 +24,9 @@ We're going to use Angular Schematics to help us scaffold base application struc
 ## TODO 2: Create base layout
 Now let's create some basic layout with a header (and navigation), footer and center content area where we will display active route
 
-1. Use `ng g c core/layout/header` to generate new header component, it will automatically be added to the `declarations: [ ]` of `CoreModule` and add it to the `exports: [ ]` too! 
+1. Use `ng g c core/layout/header` to generate new header component, it will automatically be added to the `declarations: [ ]` of `CoreModule` and then we have to also add it to the `exports: [ ]` too! 
 2. Add `<my-org-header></my-org-header>` as the first component in the `app.component.html` template
-3. Use Use `ng g c core/layout/footer` to generate new footer component, it will automatically be added to the `declarations: [ ]` of `CoreModule` and add it to the `exports: [ ]` too!
+3. Use Use `ng g c core/layout/footer` to generate new footer component, it will automatically be added to the `declarations: [ ]` of `CoreModule` and then we have to also add it to the `exports: [ ]` too!
 4. Add `<my-org-footer></my-org-footer>` as the last component in the `app.component.html` template 
 5. Replace `<h1>` in the `app.component.html` template with the `<div class="content"></div>` (it will use some prepared styles you can find in `app.component.scss`)
 6. Import `MatToolbarModule` and `MatButtonModule` from `@angular/material` inside of `core.module.ts` and add them to `imports: [ ]`
