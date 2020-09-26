@@ -6,8 +6,8 @@ by [@tomastrajan](https://twitter.com/tomastrajan) and [@kreuzercode](https://tw
 
 In this exercise were going to explore how to scaffold an application skeleton using the Angular CLI and the Angular Schematics. We are going to learn the following topics:
 
-- How to create CoreModule
-- How to create SharedModule
+- How to create a `CoreModule`
+- How to create a `SharedModule`
 - How to create base layout
 - How to set up routing
 - How to create lazy loaded `HomeModule` and `CustomersModule`
