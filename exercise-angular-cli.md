@@ -63,7 +63,7 @@ In this exercise were going to explore Angular CLI
 5. Once done explore the `dist` folder
 6. What other difference besides the size of the files was between the DEV and the PROD mode and what is its purpose?
 7. Explore options of `ng build` script using `--help` flag
-8. Open `.browserslistrc` file (`projects/customer-admin-app/`) and explore its content
+8. Open `.browserslistrc` file (`projects/customer-admin-app/`) and explore its content and enable IE 11 by removing the `not` keyword
 9. Build your application again using `npm build:prod`
 10. What files have been generated compared to previously and why?
 11. Explore [browserslist](https://browsersl.ist/?q=last+1+Chrome+version%2C+last+1+Firefox+version%2C+last+2+Edge+major+versions%2C+last+2+Safari+major+versions%2C+last+2+iOS+major+versions%2C+Firefox+ESR%2C+not+IE+9-10%2C+not+IE+11) for your query
