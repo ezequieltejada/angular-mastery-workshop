@@ -59,7 +59,7 @@ In this exercise were going to explore Angular CLI
 1. Serving application is great for the development purposes but we have to build artifacts to deploy to production
 2. Build application using `ng build` (or `npm run build`, notice the `run` keyword, every script besides `start` and `test` have to use `run`)
 3. Once done explore the `dist` folder
-4. Add new `build:prod` script to your `package.json` file and add `--prod` flags, and build your application again using `npm build:prod`
+4. Add new `build:prod` script to your `package.json` file and add `--prod` flags, and build your application again using `npm run build:prod`
 5. Once done explore the `dist` folder
 6. What other difference besides the size of the files was between the DEV and the PROD mode and what is its purpose?
 7. Explore options of `ng build` script using `--help` flag
