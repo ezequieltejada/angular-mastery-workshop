@@ -1,6 +1,6 @@
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { By } from '@angular/platform-browser';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SharedModule } from '../../shared.module';
 
@@ -23,24 +23,26 @@ describe('ConfirmDialogComponent', () => {
   const clickConfirmButton = () =>
     fixture.debugElement.query(By.css('[mat-raised-button]')).nativeElement.click();
 
-  beforeEach(async(() => {
-    mockMatDialogRef = { close: () => {} };
-    spyOn(mockMatDialogRef, 'close');
+  beforeEach(
+    waitForAsync(() => {
+      mockMatDialogRef = { close: () => {} };
+      spyOn(mockMatDialogRef, 'close');
 
-    TestBed.configureTestingModule({
-      imports: [SharedModule],
-      providers: [
-        { provide: MatDialogRef, useValue: mockMatDialogRef },
-        {
-          provide: MAT_DIALOG_DATA,
-          useValue: {
-            title: 'some title',
-            message: 'some message',
+      TestBed.configureTestingModule({
+        imports: [SharedModule],
+        providers: [
+          { provide: MatDialogRef, useValue: mockMatDialogRef },
+          {
+            provide: MAT_DIALOG_DATA,
+            useValue: {
+              title: 'some title',
+              message: 'some message',
+            },
           },
-        },
-      ],
-    }).compileComponents();
-  }));
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ConfirmDialogComponent);

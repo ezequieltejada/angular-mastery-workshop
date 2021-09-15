@@ -1,6 +1,6 @@
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { SharedModule } from '../../../shared/shared.module';
@@ -41,24 +41,26 @@ describe('NotificationComponent', () => {
   const getNotificationButton = notificationIndex =>
     getNotificationByIndex(notificationIndex).query(By.css('button'));
 
-  beforeEach(async(() => {
-    mockNotificationsService = {
-      notifications: of(MOCK_NOTIFICATIONS),
-      remove(notification: Notification) {},
-    };
-    spyOn(mockNotificationsService, 'remove');
+  beforeEach(
+    waitForAsync(() => {
+      mockNotificationsService = {
+        notifications: of(MOCK_NOTIFICATIONS),
+        remove(notification: Notification) {},
+      };
+      spyOn(mockNotificationsService, 'remove');
 
-    TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, SharedModule],
-      declarations: [NotificationComponent],
-      providers: [
-        {
-          provide: ReactiveNotificationService,
-          useValue: mockNotificationsService,
-        },
-      ],
-    }).compileComponents();
-  }));
+      TestBed.configureTestingModule({
+        imports: [NoopAnimationsModule, SharedModule],
+        declarations: [NotificationComponent],
+        providers: [
+          {
+            provide: ReactiveNotificationService,
+            useValue: mockNotificationsService,
+          },
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NotificationComponent);

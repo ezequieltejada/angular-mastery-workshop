@@ -1,7 +1,7 @@
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Observable, of, asyncScheduler } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
@@ -37,33 +37,35 @@ describe('CustomerDetailsComponent', () => {
   const getName = () =>
     fixture.debugElement.query(By.css('h1 span')).nativeElement.textContent.trim();
 
-  beforeEach(async(() => {
-    mockCustomerBackendService = {
-      get(id: number): Observable<Customer> {
-        return of({ ...MOCK_CUSTOMER }).pipe(delay(50, asyncScheduler));
-      },
-      update(customer: Customer): Observable<Customer> {
-        return of();
-      },
-    };
-    spyOn(mockCustomerBackendService, 'get').and.callThrough();
-    spyOn(mockCustomerBackendService, 'update').and.callThrough();
-    TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, RouterTestingModule, SharedModule],
-      providers: [
-        { provide: CustomersBackendService, useValue: mockCustomerBackendService },
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            paramMap: of({
-              get: () => '0',
-            }),
-          },
+  beforeEach(
+    waitForAsync(() => {
+      mockCustomerBackendService = {
+        get(id: number): Observable<Customer> {
+          return of({ ...MOCK_CUSTOMER }).pipe(delay(50, asyncScheduler));
         },
-      ],
-      declarations: [CustomerDetailsComponent],
-    }).compileComponents();
-  }));
+        update(customer: Customer): Observable<Customer> {
+          return of();
+        },
+      };
+      spyOn(mockCustomerBackendService, 'get').and.callThrough();
+      spyOn(mockCustomerBackendService, 'update').and.callThrough();
+      TestBed.configureTestingModule({
+        imports: [NoopAnimationsModule, RouterTestingModule, SharedModule],
+        providers: [
+          { provide: CustomersBackendService, useValue: mockCustomerBackendService },
+          {
+            provide: ActivatedRoute,
+            useValue: {
+              paramMap: of({
+                get: () => '0',
+              }),
+            },
+          },
+        ],
+        declarations: [CustomerDetailsComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CustomerDetailsComponent);

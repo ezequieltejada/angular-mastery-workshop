@@ -2,7 +2,7 @@ import { By } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { TestScheduler } from 'rxjs/testing';
@@ -28,39 +28,41 @@ describe('CustomersComponent', () => {
 
   const getResetButton = () => fixture.debugElement.query(By.css('form button'));
 
-  beforeEach(async(() => {
-    testScheduler = new TestScheduler((actual, expected) => expect(actual).toEqual(expected));
-    mockCustomerBackendService = {
-      findCustomers(query: string): Observable<Customer[]> {
-        return of([]);
-      },
-      remove(id: number): Observable<void> {
-        return of();
-      },
-    };
-    spyOn(mockCustomerBackendService, 'findCustomers')
-      .withArgs('')
-      .and.callThrough()
-      .withArgs('john')
-      .and.returnValue(of([MOCK_CUSTOMER]));
-    spyOn(mockCustomerBackendService, 'remove').and.callThrough();
-    TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, RouterTestingModule, SharedModule],
-      declarations: [CustomersComponent, CustomerItemComponent],
-      providers: [
-        {
-          provide: CustomersBackendService,
-          useValue: mockCustomerBackendService,
+  beforeEach(
+    waitForAsync(() => {
+      testScheduler = new TestScheduler((actual, expected) => expect(actual).toEqual(expected));
+      mockCustomerBackendService = {
+        findCustomers(query: string): Observable<Customer[]> {
+          return of([]);
         },
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            snapshot: { queryParams: { query: 'john' } },
+        remove(id: number): Observable<void> {
+          return of();
+        },
+      };
+      spyOn(mockCustomerBackendService, 'findCustomers')
+        .withArgs('')
+        .and.callThrough()
+        .withArgs('john')
+        .and.returnValue(of([MOCK_CUSTOMER]));
+      spyOn(mockCustomerBackendService, 'remove').and.callThrough();
+      TestBed.configureTestingModule({
+        imports: [NoopAnimationsModule, RouterTestingModule, SharedModule],
+        declarations: [CustomersComponent, CustomerItemComponent],
+        providers: [
+          {
+            provide: CustomersBackendService,
+            useValue: mockCustomerBackendService,
           },
-        },
-      ],
-    }).compileComponents();
-  }));
+          {
+            provide: ActivatedRoute,
+            useValue: {
+              snapshot: { queryParams: { query: 'john' } },
+            },
+          },
+        ],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CustomersComponent);
