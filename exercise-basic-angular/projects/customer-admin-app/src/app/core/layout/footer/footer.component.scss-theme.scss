@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 @mixin my-org-footer-component-theme($theme) {
   $primary: map-get($theme, primary);
@@ -8,14 +8,14 @@
   $background: map-get($theme, background);
 
   my-org-footer {
-    color: mat-color($foreground, text);
-    background-color: mat-color($background, status-bar);
+    color: mat.get-color-from-palette($foreground, text);
+    background-color: mat.get-color-from-palette($background, status-bar);
 
     a {
-      color: mat-color($primary);
+      color: mat.get-color-from-palette($primary);
 
       &:hover {
-        color: mat-color($primary, darker);
+        color: mat.get-color-from-palette($primary, darker);
       }
     }
   }
