@@ -1,6 +1,6 @@
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { SharedModule } from '../../../shared/shared.module';
@@ -34,7 +34,7 @@ describe('NotificationComponent', () => {
   // TODO 13: implement "getNotificationButton" method by calling previously defined "getNotificationByIndex" continuing by using "query" with "By.css" for "button" tag
   const getNotificationButton = (notificationIndex) => null;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     // TODO 5: create "mockNotificationService" as a new empty object
     // and add "notifications" property with the observable value "of()" MOCK_NOTIFICATIONS
     // also add remove method (try using IDE code completion) and leave it empty

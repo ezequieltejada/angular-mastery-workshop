@@ -22,14 +22,19 @@
             "main": "projects/customer-admin-app/src/main.ts",
             "polyfills": "projects/customer-admin-app/src/polyfills.ts",
             "tsConfig": "projects/customer-admin-app/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/customer-admin-app/src/assets"
             ],
             "styles": [
               "projects/customer-admin-app/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -42,7 +47,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -60,7 +64,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
