@@ -28,7 +28,10 @@ export class CustomerDetailsComponent implements OnInit {
     // hint: you might need to convert string into number, use parseInt
     this.customer = undefined;
 
-    // TODO 10: OPTIONAL: use combineLatest (RxJs creation operator) to combine previously used "paramMap" stream
+    // TODO 10: OPTIONAL
+    // if you tried to remove customer tag, you would notice it is not removed until the customer detail page is refreshed
+    // comment out previous customer stream definition and re-define it here with the help of
+    // combineLatest (RxJs creation operator) to combine previously used "paramMap" stream
     // with stream of "this.reloadTrigger" (ignore the trigger value, used just for triggering)
     // to reload customer when adding or removing tags to the backend...
     // it will need to be piped with "startWith" operator to trigger initial load
@@ -42,7 +45,7 @@ export class CustomerDetailsComponent implements OnInit {
     // optimistic update (immediately add tag to UI, remove it in case of error later...)
     customer.tags = [...customer.tags, tagToAdd];
     this.customersBackendService.update(customer).subscribe({
-      error: () => (customer.tags = customer.tags.filter((tag) => tag !== tagToAdd)), // remove tag in case of error
+      error: () => (customer.tags = customer.tags.filter(tag => tag !== tagToAdd)), // remove tag in case of error
     });
   }
 
@@ -50,7 +53,7 @@ export class CustomerDetailsComponent implements OnInit {
     // pessimistic update (only remove tag from UI after backend request was successful)
     const updatedCustomer = {
       ...customer,
-      tags: customer.tags.filter((tag) => tag !== tagToRemove),
+      tags: customer.tags.filter(tag => tag !== tagToRemove),
     };
     this.customersBackendService.update(updatedCustomer).subscribe(() => this.reloadTrigger.next());
   }
