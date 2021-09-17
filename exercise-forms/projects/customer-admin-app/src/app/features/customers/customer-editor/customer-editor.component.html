@@ -12,7 +12,7 @@
   </h1>
 
   <mat-card>
-    <!-- TODO 5: add <from> tag with "formGroup" directive which references our "customerForm" -->
+    <!-- TODO 5: add <from> tag without "action" and with "formGroup" directive which references our "customerForm" -->
 
     <!-- TODO 6: inside of the form add form fields like the following
 
@@ -77,6 +77,8 @@
       You might want to use <mat-error *ngIf="customerForm.get('name').hasError('required')">
       for every validator if you specified more than one validator for that field
     -->
+
+    <!-- TODO 21: Congratulations, you reached the end of the exercise! -->
 
     <div class="actions">
       <button mat-raised-button (click)="submit(c)" color="accent">Submit</button>

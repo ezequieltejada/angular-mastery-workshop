@@ -46,7 +46,6 @@ import { TagListComponent } from './tag-list/tag-list.component';
     // angular
     CommonModule,
     RouterModule,
-    ReactiveFormsModule,
 
     // material
     MatToolbarModule,

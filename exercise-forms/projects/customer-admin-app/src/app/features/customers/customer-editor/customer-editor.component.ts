@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 
 import { Customer } from '../model/customers';
@@ -37,7 +37,7 @@ export class CustomerEditorComponent implements OnInit {
     // next TODO items can be found in "customer-editor.component.html" file
 
     this.customer = this.activatedRoute.paramMap.pipe(
-      map((paramMap) => paramMap.get('id')),
+      map(paramMap => paramMap.get('id')),
       switchMap((id: string) => this.customersBackendService.get(parseInt(id, 10))),
       // TODO 13: created form starts with default values but we want to edit existing customer
       // we have to use retrieved "customer" value (from backend) and feed it to the form
