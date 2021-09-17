@@ -1,7 +1,7 @@
 import { By } from '@angular/platform-browser';
 import { Component } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SharedModule } from '../shared.module';
 
@@ -37,7 +37,7 @@ describe('TagListComponent', () => {
       .queryAll(By.css('my-org-tag-list > div > span'))
       [tagIndex].nativeElement.textContent.trim();
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [TestHostComponent],
       imports: [NoopAnimationsModule, SharedModule],

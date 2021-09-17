@@ -1,7 +1,7 @@
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, fakeAsync, tick, TestBed, flush } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, tick, TestBed, flush, waitForAsync } from '@angular/core/testing';
 
 import { SharedModule } from '../../../shared/shared.module';
 
@@ -27,7 +27,7 @@ describe('CustomerItemComponent', () => {
   const getDialogCancelButton = () =>
     document.querySelector('[mat-dialog-actions] button:last-child');
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [NoopAnimationsModule, RouterTestingModule, SharedModule],
       declarations: [CustomerItemComponent],

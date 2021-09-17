@@ -2,7 +2,7 @@ import { By } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { TestScheduler } from 'rxjs/testing';
@@ -28,7 +28,7 @@ describe('CustomersComponent', () => {
 
   const getResetButton = () => fixture.debugElement.query(By.css('form button'));
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     testScheduler = new TestScheduler((actual, expected) => expect(actual).toEqual(expected));
     mockCustomerBackendService = {
       findCustomers(query: string): Observable<Customer[]> {

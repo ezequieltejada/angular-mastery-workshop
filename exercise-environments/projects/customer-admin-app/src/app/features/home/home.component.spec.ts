@@ -1,5 +1,5 @@
 import { By } from '@angular/platform-browser';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 
@@ -9,7 +9,7 @@ describe('HomeComponent', () => {
 
   const getTitle = () => fixture.debugElement.query(By.css('h1')).nativeElement.textContent.trim();
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [HomeComponent],
     }).compileComponents();

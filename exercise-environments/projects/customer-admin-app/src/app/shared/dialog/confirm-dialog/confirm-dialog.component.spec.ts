@@ -1,6 +1,6 @@
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { By } from '@angular/platform-browser';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SharedModule } from '../../shared.module';
 
@@ -23,7 +23,7 @@ describe('ConfirmDialogComponent', () => {
   const clickConfirmButton = () =>
     fixture.debugElement.query(By.css('[mat-raised-button]')).nativeElement.click();
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     mockMatDialogRef = { close: () => {} };
     spyOn(mockMatDialogRef, 'close');
 

@@ -1,7 +1,7 @@
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Observable, of, asyncScheduler } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
@@ -37,7 +37,7 @@ describe('CustomerDetailsComponent', () => {
   const getName = () =>
     fixture.debugElement.query(By.css('h1 span')).nativeElement.textContent.trim();
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     mockCustomerBackendService = {
       get(id: number): Observable<Customer> {
         return of({ ...MOCK_CUSTOMER }).pipe(delay(50, asyncScheduler));
