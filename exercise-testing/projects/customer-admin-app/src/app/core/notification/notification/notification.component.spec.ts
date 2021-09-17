@@ -17,7 +17,7 @@ const MOCK_NOTIFICATIONS = undefined;
 describe('NotificationComponent', () => {
   let component: NotificationComponent;
   let fixture: ComponentFixture<NotificationComponent>;
-  // TODO 4: declare re-assignable "mockNotificationService" variable with "Partial" type of the real service (you can find it in the component class)
+  // TODO 4: declare re-assignable "mockNotificationService" variable with "Partial" type of the real service used by the component (see which service class is injected in the component constructor)
 
   // TODO 8: implement "getNotifications" helper which will get notifications from DOM
   // using fixture debugElement "queryAll" method where we will pass "By.css" method and a css selector for "mat-card" element
@@ -72,6 +72,8 @@ describe('NotificationComponent', () => {
     // TODO 16: expect that the "remove" method of the "mockNotificationsService" has been called once
     // TODO 17: expect that the "remove" method of the "mockNotificationsService" has been called with the removed notification
     // TODO 18: try to break tests to see if they are really working
-    // TODO 19: try running "ng test --watch false --code-coverage" and explore content of the "coverage/" folder (open index.html file)
+    // TODO 19: change "fdescribe" back to "describe" at the top of this file
+    // TODO 20: try running "ng test --watch false --code-coverage" and explore content of the "coverage/" folder (open index.html file)
+    // TODO 21: in the coverage view, focus on "src/app/core/notification/notification:
   });
 });
