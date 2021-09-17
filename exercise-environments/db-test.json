@@ -22,6 +22,7 @@
       "surname": "Lyanna",
       "birthday": "1996-11-30T00:00:00.000Z",
       "lifetimeOrderValue": 0,
+      "isVip": false,
       "address": {
         "location": "Bear Island",
         "land": "Slaver's Bay",
@@ -37,6 +38,7 @@
       "surname": "Stark",
       "birthday": "1999-05-07T00:00:00.000Z",
       "lifetimeOrderValue": 15247,
+      "isVip": false,
       "address": {
         "location": "Winterfell",
         "land": "The North",
@@ -50,6 +52,7 @@
       "surname": "Lannister",
       "birthday": "1980-09-02T00:00:00.000Z",
       "lifetimeOrderValue": 627913,
+      "isVip": false,
       "address": {
         "land": "The Westerlands",
         "continent": "Westeros"
