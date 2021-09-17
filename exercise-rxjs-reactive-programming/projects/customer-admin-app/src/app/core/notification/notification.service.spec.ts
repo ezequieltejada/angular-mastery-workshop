@@ -21,7 +21,7 @@ describe('NotificationService', () => {
         },
       ],
     });
-    service = TestBed.get(NotificationService);
+    service = TestBed.inject(NotificationService);
   });
 
   it('should be created', () => {

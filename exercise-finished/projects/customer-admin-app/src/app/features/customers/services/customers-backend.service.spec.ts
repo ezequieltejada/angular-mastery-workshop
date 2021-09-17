@@ -25,8 +25,8 @@ describe('CustomersBackendService', () => {
       ],
     });
 
-    service = TestBed.get(CustomersBackendService);
-    httpTestingController = TestBed.get(HttpTestingController);
+    service = TestBed.inject(CustomersBackendService);
+    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   afterEach(() => httpTestingController.verify());

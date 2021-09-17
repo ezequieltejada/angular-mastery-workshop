@@ -24,7 +24,7 @@ describe('ReactiveNotificationService', () => {
         },
       ],
     });
-    service = TestBed.get(ReactiveNotificationService);
+    service = TestBed.inject(ReactiveNotificationService);
   });
 
   it('should be created', () => {

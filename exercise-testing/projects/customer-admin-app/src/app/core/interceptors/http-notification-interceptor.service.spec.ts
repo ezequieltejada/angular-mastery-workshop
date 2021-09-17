@@ -24,7 +24,7 @@ describe('HttpNotificationInterceptor', () => {
         { provide: ReactiveNotificationService, useValue: mockNotificationsService },
       ],
     });
-    interceptor = TestBed.get(HttpNotificationInterceptor);
+    interceptor = TestBed.inject(HttpNotificationInterceptor);
   });
 
   it('should be created', () => {
