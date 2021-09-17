@@ -23,14 +23,16 @@ export class CustomersBackendService {
 
   findCustomers(query: string): Observable<Customer[]> {
     // TODO 3: make and return get request using http client
-    //  make request to RESOURCE_URL with query param "q" with the value of the "query" argument passed in the method
-    // (try using Javascript template string - back ticks and ${} syntax to print value of the variable)
+    // make request to RESOURCE_URL with query param "q" with the value of the "query" argument passed in the method
+    // we can pass it in the second options argument in "params: { q: query }"
+    // try if it works in the UI by searching for customer using provided search field
     return of([]); // remove this when you provide real implementation
   }
 
   get(id: number): Observable<Customer> {
     // TODO 4: make and return get request using http client
     // make request to RESOURCE_URL followed by the "id" as path param
+    // (try using Javascript template string - back ticks and ${} syntax to create desired url)
     return of({} as any); // remove this when you provide real implementation
   }
 

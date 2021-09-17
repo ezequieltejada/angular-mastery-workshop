@@ -20,8 +20,8 @@ describe('CustomersBackendService', () => {
     });
 
     // run tests using "npm run watch" and use "fdescribe" instead of "describe" at the top of this file to only run this test
-    // TODO 7: Use the "TestBed" to get instance of "CustomersBackendService" and store it in the "service" variable
-    // TODO 8: Use the "TestBed" to get instance of "HttpTestingController" and store it in the "httpTestingController" variable
+    // TODO 7: Use the "TestBed" to inject instance of "CustomersBackendService" and store it in the "service" variable
+    // TODO 8: Use the "TestBed" to inject instance of "HttpTestingController" and store it in the "httpTestingController" variable
     // hint: use inject method
   });
 
