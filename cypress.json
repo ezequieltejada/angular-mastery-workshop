@@ -1,0 +1,7 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "fixturesFolder": "projects/customer-admin-app/cypress/fixtures",
+  "integrationFolder": "projects/customer-admin-app/cypress/integration",
+  "pluginsFile": "projects/customer-admin-app/cypress/plugins/index.ts",
+  "supportFile": "projects/customer-admin-app/cypress/support/index.ts"
+}

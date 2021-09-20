@@ -81,8 +81,8 @@ In this exercise were going to explore Angular CLI
 9. Check out the new test output
 10. Try breaking a test by changing `toEqual('customer-admin-app');` in the `app.component.spec.ts` file (`/projects/customer-admin-app/src/app/`) to `customer-admin-app 1`
 11. Check out the new test output and try changing tests a couple of times
-12. Set up linting support using `ng add @angular-eslint/schematics` (This replaces deprecated `tslint` which was included out of the box in previous Angular versions) Once done, copy the root level `.eslintrc` file into the `exercise-angular-cli` folder. Next go to `projects/customer-admin-app/.eslintrc.json` and remove the line with `tsconfig.e2e.json`. Finally, run `ng lint` and explore the output.
-13. (Optional) Set up E2E (end-to-end) tests using `ng add @cypress/schematic`, agree to the CLI prompts and run `ng e2e` once finished
+12. Set up linting support using `ng add @angular-eslint/schematics` (This replaces deprecated `tslint` which was included out of the box in previous Angular versions) Once done, copy the root level `.eslintrc` file into the `exercise-angular-cli` folder. Finally, run `ng lint` and explore the output.
+13. (Optional) Set up E2E (end-to-end) tests using `ng add @cypress/schematic` and agree to the CLI prompts. Once done, copy the root level  `cypress.json` file into the `exercise-angular-cli` folder.  Finally, run `ng e2e` and try to fix first out-of-the-box test.
 
 ### Continuous Integration testing
 It usually makes sense to create dedicated `ci` npm script in package json which will execute all the tests when project is built in the CI environment, such a command can look like `"ci": "ng lint && ng test && ng build"`...
