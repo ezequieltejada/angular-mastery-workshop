@@ -29,7 +29,7 @@ Now let's create some basic layout with a header (and navigation), footer and ce
 3. Use Use `ng g c core/layout/footer` to generate new footer component, it will automatically be added to the `declarations: [ ]` of `CoreModule` and then we have to also add it to the `exports: [ ]` too!
 4. Add `<my-org-footer></my-org-footer>` as the last component in the `app.component.html` template.
 5. Replace `<h1>` in the `app.component.html` template with the `<div class="content"></div>` (it should end up being between the header and the footer, it will also use some prepared styles you can find in `app.component.scss`).
-6. Import `MatToolbarModule` and `MatButtonModule` from `@angular/material` inside of `core.module.ts` and add them to `imports: [ ]`.
+6. Import `MatToolbarModule` and `MatButtonModule` from `@angular/material/<desired-module>` (this should be done by editor auto-import) inside of `core.module.ts` and add them to `imports: [ ]`.
 7. Add `<mat-toolbar color="primary">Customer Admin</mat-toolbar>` in the `header.component.html` (remove original content`<p>` tag) .
 
 ## Todo 4: Prepare routing
@@ -42,8 +42,8 @@ Now let's create some basic layout with a header (and navigation), footer and ce
 
 ## TODO 5: Create SharedModule
 1. Run `ng generate module shared` (or `ng g m shared`) which will generate `SharedModule` file in the `src/shared` folder.
-2. Inside of our freshly generated module, please add `exports: [ ]` array to the `@NgModule` decorator and fill it with `CommonModule`. That way we can only import `SharedModule` and not both `SharedModule` and `CommonModule` in most other modules...
-3. Import `MatCardModule` from `@angular/material` inside of `shared.module.ts` and add them to both `imports: [ ]` and `exports: []`.
+2. Inside our freshly generated module, please add `exports: [ ]` array to the `@NgModule` decorator and fill it with `CommonModule`. That way we can only import `SharedModule` and not both `SharedModule` and `CommonModule` in most other modules...
+3. Import `MatCardModule` from `@angular/material/<desired-module>` (this should be done by editor auto-import) inside of `shared.module.ts` and add them to both `imports: [ ]` and `exports: []`.
 4. We will use the `SharedModule` in our lazy loaded feature modules.
 
 ## Todo 6: Create lazy loaded HomeModule and CustomersModule
